@@ -5,7 +5,7 @@
 
 **ATRX Mind** is the machine learning training component of the ATRX algorithmic trading system, specifically designed for Kaggle and cloud-based training environments. This repository contains the core ML pipeline for financial time series prediction using XGBoost, LSTM, and CNN models.
 
-## 🎯 Key Features
+##  Key Features
 
 - **Production-Ready ML Pipeline**: End-to-end training from data preprocessing to model deployment
 - **Multiple Model Support**: XGBoost, LSTM, and CNN implementations
@@ -14,15 +14,15 @@
 - **Walk-Forward Validation**: Time-series aware cross-validation
 - **Kaggle Optimized**: Designed for efficient training on Kaggle GPUs
 
-## 📊 Recent Performance (Audit Results)
+## Recent Performance (Audit Results)
 
 - **Data Retention**: 99.9% (vs. previous 60% loss)
 - **Feature Engineering**: 30+ features computed correctly
 - **Label Quality**: 60% retention after VoV filtering (intentional)
 - **XGBoost Accuracy**: 99.2% validation accuracy
-- **Production Ready**: ✅ Passed comprehensive audit
+- **Production Ready**:  Passed comprehensive audit
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ATRX_Mind/
@@ -35,7 +35,7 @@ ATRX_Mind/
 └── outputs/        # Model artifacts
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Environment Setup
 
@@ -121,7 +121,7 @@ python trainers/train_cnn.py \
     --outdir outputs/models/cnn_eurusd
 ```
 
-## 📈 Feature Engineering
+## Feature Engineering
 
 ATRX Mind computes 30+ sophisticated features:
 
@@ -138,7 +138,7 @@ ATRX Mind computes 30+ sophisticated features:
 - **Order Flow**: Bid-ask imbalance, effective spread
 - **Quote Dynamics**: Quote slope, mid-price returns
 
-## 🎯 Labeling Strategy
+## Labeling Strategy
 
 Uses advanced Triple-Barrier labeling:
 
@@ -147,7 +147,7 @@ Uses advanced Triple-Barrier labeling:
 3. **VoV Filtering**: Removes labels during high volatility regimes
 4. **Label Mapping**: {-1: Down, 0: Timeout, 1: Up} → {0, 1, 2}
 
-## ⚡ Performance Optimizations
+## Performance Optimizations
 
 - **NaN Handling**: Forward/backward fill with warmup cutoff
 - **Memory Efficiency**: Float32 precision, chunked processing
@@ -155,7 +155,7 @@ Uses advanced Triple-Barrier labeling:
 - **XGBoost Native**: Preserves NaNs for XGBoost's native handling
 - **Neural Network**: Smart NaN filling for LSTM/CNN
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Run all tests
@@ -167,7 +167,7 @@ pytest tests/test_labeling.py -v
 pytest tests/test_training.py -v
 ```
 
-## 📊 Kaggle Integration
+## Kaggle Integration
 
 ### Environment Setup
 ```python
@@ -190,7 +190,7 @@ python trainers/train_lstm.py --batch-size 512 --epochs 100
 python trainers/train_cnn.py --batch-size 1024 --epochs 100
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Features Configuration (`config/features.yaml`)
 - Window sizes for rolling computations
@@ -213,7 +213,7 @@ Each trained model generates:
 - **Feature Importance**: XGBoost feature rankings
 - **Training Logs**: Comprehensive execution logs
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -229,7 +229,7 @@ export ATRX_LOG_LEVEL=DEBUG
 python trainers/train_xgboost.py --debug
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/amazing-feature`)
@@ -237,11 +237,11 @@ python trainers/train_xgboost.py --debug
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built on the robust ATRX algorithmic trading framework
 - Incorporates best practices from quantitative finance
@@ -249,6 +249,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Ready for Production Training** 🚀
+**Ready for Production Training** 
 
 *ATRX Mind has passed comprehensive audits and is production-ready for large-scale model training on Kaggle and cloud platforms.*
