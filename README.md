@@ -204,7 +204,7 @@ python trainers/train_cnn.py --batch-size 1024 --epochs 100
 - Feature engineering options
 - Validation strategies
 
-## 📝 Model Outputs
+##  Model Outputs
 
 Each trained model generates:
 - **Model Artifacts**: `.pkl`, `.h5`, `.onnx` files
